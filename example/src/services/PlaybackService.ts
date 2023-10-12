@@ -1,4 +1,5 @@
-import TrackPlayer, { Event } from 'react-native-track-player';
+import TrackPlayer, { Event, Track } from 'react-native-track-player';
+import playlistData from '../assets/data/playlist.json';
 
 export async function PlaybackService() {
   TrackPlayer.addEventListener(Event.RemotePause, () => {
@@ -40,8 +41,13 @@ export async function PlaybackService() {
     console.log('Event.RemoteDuck', event);
   });
 
-  TrackPlayer.addEventListener(Event.PlaybackQueueEnded, (event) => {
+  TrackPlayer.addEventListener(Event.PlaybackQueueEnded, async (event) => {
     console.log('Event.PlaybackQueueEnded', event);
+    const activeTrack = await TrackPlayer.getActiveTrack();
+    await TrackPlayer.load((playlistData as Track[])[activeTrack?.order + 1]);
+    await TrackPlayer.skip(0, 0);
+
+    await TrackPlayer.play();
   });
 
   TrackPlayer.addEventListener(Event.PlaybackActiveTrackChanged, (event) => {

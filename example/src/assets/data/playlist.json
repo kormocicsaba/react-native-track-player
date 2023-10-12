@@ -4,28 +4,32 @@
     "title": "Longing",
     "artist": "David Chavez",
     "artwork": "https://rntp.dev/example/Longing.jpeg",
-    "duration": 143
+    "duration": 143,
+    "order": 1
   },
   {
     "url": "https://rntp.dev/example/Soul%20Searching.mp3",
     "title": "Soul Searching (Demo)",
     "artist": "David Chavez",
     "artwork": "https://rntp.dev/example/Soul%20Searching.jpeg",
-    "duration": 77
+    "duration": 77,
+    "order": 2
   },
   {
     "url": "https://rntp.dev/example/Lullaby%20(Demo).mp3",
     "title": "Lullaby (Demo)",
     "artist": "David Chavez",
     "artwork": "https://rntp.dev/example/Lullaby%20(Demo).jpeg",
-    "duration": 71
+    "duration": 71,
+    "order": 3
   },
   {
     "url": "https://rntp.dev/example/Rhythm%20City%20(Demo).mp3",
     "title": "Rhythm City (Demo)",
     "artist": "David Chavez",
     "artwork": "https://rntp.dev/example/Rhythm%20City%20(Demo).jpeg",
-    "duration": 106
+    "duration": 106,
+    "order": 4
   },
   {
     "url": "https://rntp.dev/example/hls/whip/playlist.m3u8",

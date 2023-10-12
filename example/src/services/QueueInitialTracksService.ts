@@ -7,14 +7,5 @@ import localTrack from '../assets/resources/pure.m4a';
 import localArtwork from '../assets/resources/artwork.jpg';
 
 export const QueueInitialTracksService = async (): Promise<void> => {
-  await TrackPlayer.add([
-    ...(playlistData as Track[]),
-    {
-      url: localTrack,
-      title: 'Pure (Demo)',
-      artist: 'David Chavez',
-      artwork: localArtwork,
-      duration: 28,
-    },
-  ]);
+  await TrackPlayer.load((playlistData as Track[])[0]);
 };
